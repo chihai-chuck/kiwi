@@ -1,0 +1,64 @@
+@import "fonts/iconkiwi";
+
+[class*="kiwi-"],
+[class*="icon-kiwi"] {
+    font-family: PingFang SC, Microsoft YaHei, "-apple-system", HelveticaNeue, Noto Sans, iconkiwi, sans-serif;
+}
+[class*="popup-"] {
+    z-index: 2;
+    width: 100%;
+    transition: none .3s;
+}
+.popup-fade {
+    transition-property: opacity;
+}
+[class*="popup-fade-in-"] {
+    position: absolute !important;
+    transition-property: opacity, transform;
+}
+.popup-fade-in-up {
+    left: 0;
+    bottom: 0;
+}
+.popup-fade-in-bottom,
+.popup-fade-in-right {
+    top: 0;
+    left: 0;
+}
+.popup-fade-in-left {
+    top: 0;
+    right: 0;
+}
+.fade-enter-active [class*="popup-fade"],
+.fade-leave-active [class*="popup-fade"] {
+    opacity: 1;
+}
+/*.fade-enter-active [class*="popup-fade-in-"],
+.fade-leave-active [class*="popup-fade-in-"] {
+    transform: translate3d(0, 0, 0);
+}*/
+.fade-enter [class*="popup-fade"],
+.fade-leave-to [class*="popup-fade"] {
+    opacity: 0;
+}
+.fade-enter .popup-fade-in-up,
+.fade-leave-to .popup-fade-in-up {
+    transform: translate3d(0, 500px, 0);
+}
+.fade-enter .popup-fade-in-bottom,
+.fade-leave-to .popup-fade-in-bottom {
+    transform: translate3d(0, -200px, 0);
+}
+.fade-enter .popup-fade-in-left,
+.fade-leave-to .popup-fade-in-left {
+    transform: translate3d(500px, 0, 0);
+}
+.fade-enter .popup-fade-in-right,
+.fade-leave-to .popup-fade-in-right {
+    transform: translate3d(-500px, 0, 0);
+}
+.fade-enter .popup-fade-in-scale,
+.fade-leave-to .popup-fade-in-scale {
+    transition-duration: .4s;
+    transform: scale3d(1.1, 1.1, 1.1) translate3d(0, -30px, 0);
+}

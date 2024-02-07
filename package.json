@@ -1,0 +1,40 @@
+{
+    "name": "kiwi",
+    "version": "1.0.0",
+    "private": true,
+    "description": "几维 - 适用于 uni-app 的移动端通用UI组件库",
+    "author": "pecasha<chihai@pecasha.com>",
+    "homepage": "https://kiwi.pecasha.com",
+    "license": "GPL-3.0-or-later",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pecasha/kiwi.git"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org"
+    },
+    "files": [
+        "components",
+        "styles"
+    ],
+    "scripts": {
+        "up": "pnpm update -i --latest",
+        "iconfont": "pdk-base64-iconfont -f ./development/iconfont/download.zip -s ./styles/fonts/iconkiwi.less -n iconkiwi -d",
+        "publ": "pdk-npm-publish & npm publ"
+    },
+    "dependencies": {
+        "@pecasha/uniapp-helpers": "^1.0.0",
+        "vue": "^3.4.18",
+        "vue-facing-decorator": "^3.0.4"
+    },
+    "peerDependencies": {
+        "@pecasha/uniapp-helpers": "^1.0.0",
+        "vue": "^3.4.18",
+        "vue-facing-decorator": "^3.0.4"
+    },
+    "devDependencies": {
+        "@dcloudio/types": "^3.4.7",
+        "@pecasha/devkit": "^1.0.2",
+        "typescript": "^5.3.3"
+    }
+}

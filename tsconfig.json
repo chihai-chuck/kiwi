@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "useDefineForClassFields": true,
+        "skipLibCheck": true,
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "preserve",
+        "strict": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "/components/**/*"
+            ]
+        },
+        "types": [
+            "@dcloudio/types"
+        ],
+        "lib": [
+            "esnext",
+            "dom",
+            "dom.iterable"
+        ]
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
